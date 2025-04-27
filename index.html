@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Movie CRUD</title>
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row d-flex justify-content-between align-items-center">
+             <div class="logo">
+            <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="logo-img"></a>
+        </div>
+        <div class="addmoviebtn">
+            <button class="btn btn-danger hideshow">Add Movie</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt-5">
+    <div class="row" id="moviescontainer">
+        <!-- <div class="col-3">
+            <figure>
+                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQjang2tSfHU_olHQ-m_gzuGMDV-h1wMsAsoagx_ho5GW2KksCy" alt="movie-img">
+                <div class="ratingtitle d-flex justify-content-between px-3">
+                    <div class="title">
+                        Stranger Things
+                    </div>
+<small class="bg-danger p-1">4</small>
+                
+                </div>
+                <div class="description">
+                    <div class="editremove d-flex justify-content-between p-2">
+                        <i class="fas fa-edit fa-2x text-warning " onclick="onedit(this)"></i>
+                        <i class="fas fa-trash fa-2x text-danger" onclick="onremove(this)"></i>
+                    </div>
+                    <p>>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, hic! Repellat exercitationem sunt a voluptatibus numquam enim neque reprehenderit distinctio sed reiciendis est, quasi us ut sed qui distinctio praesentium. Animi illum dolore quibusdam adipisci? Debitis te</p>
+                </div>
+            </figure>
+        </div> -->
+    </div>
+</div>
+<div class="hideshow d-none" id="backdrop"></div>
+<div id="dropdown" class="d-none">
+    <div class="heading d-flex justify-content-between px-4">
+        <h2>Add Movie</h2>
+        <i class="fas fa-times fa-2x hideshow"></i>
+    </div>
+<form id="mform">
+    <div class="form-group">
+        <label for="mtitle">Movie Title</label>
+        <input type="text" class="form-control" id="mtitle" required>
+    </div>
+<div class="form-group">
+    <label for="murl">Movie URL</label>
+    <input type="text" id="murl" class="form-control" required>
+</div>
+<div class="form-group">
+    <label for="mdescription">Movie Description</label>
+<textarea class="form-control" rows="4" id="mdescription" class="form-control" required></textarea>
+</div>
+<div class="form-group">
+    <label for="mrating">Movie Rating</label>
+    <select id="mrating" class="form-control" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+    </select>
+</div>
+<button class="btn btn-danger" id="submitmbtn">Add Movie</button>
+<button class="btn btn-danger d-none" type="button" id="updatembtn">Update Movie</button>
+<button class="btn btn-danger hideshow" type="button" id="close"> Close</button>
+
+
+</form>
+</div>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
